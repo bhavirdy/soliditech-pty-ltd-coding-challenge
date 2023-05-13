@@ -1,0 +1,11 @@
+NamesCount is a component for analysing the proportion of names in a set of names.
+
+For example:
+NamesCount namesCount = new NamesCount();
+namesCount.addName("James");
+namesCount.addName("John");
+namesCount.addName("Mary");
+namesCount.addName("Mary");
+
+Running namesCount.nameProportion("John") should return 0.25.
+And running namesCount.nameProportion("Mary") should return 0.5.

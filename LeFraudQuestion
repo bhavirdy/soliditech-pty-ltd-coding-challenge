@@ -1,0 +1,20 @@
+Could-a-Been Bank, 
+a banking institution established on 1 June 2000, 
+requires some of your skills to tackle a recent spike in fraudulent transaction attempts, 
+the trend shows that a group of fraudulent account references have been created to invoke these 
+fraudulent transactions, 
+so you are required to create some form of validator to detect these false references.
+
+
+The rules to passing validation are described as follows:
+
+- date: 
+    The first 6 characters specify a date (formatted as ddMMyyyy) that must be after the company's inception and cannot be in the future
+
+- char sequence (a-z): 
+    sequence of alphabetical characters (from a-z) of length 5
+
+- length of the reference must be 13 characters long
+
+
+An example of a valid reference would be: 21042023abcde

@@ -1,0 +1,21 @@
+The FBI have been investigating a group of cryptocurrency scammers who use their online social media influence to trick people into investing into fake cryptocurrency funds and then running away with the money.
+
+Fortunately, the FBI have narrowed down a few crypto wallet IDs involved in the scam, which they are confident belong to certain individuals behind the whole scheme. As an intern at the FBI, you are tasked with tallying-up the amounts stolen by each person involved with the scam, so they can be held accountable.
+
+Each individual behind the scam may be associated with multiple wallets, but you have been supplied with a HashMap 'markedWallets' that maps each wallet ID to one of the criminal masterminds' real name.
+
+For example the wallet ID 'wfjaw789' may map to the real name 'Scam Bankman Fraud'
+
+You have also been given a String which holds the raw data of all transactions into a number of wallets.
+
+Each transaction is separated by the semicolon character ';' and each transaction holds information about the wallet ID as well as the transaction amount, separated by the ':' character.
+
+For example 'wfjaw789:27000' is a single transaction of 27000 coins into the wallet with ID wfjaw789.
+
+For another example 'wfjaw789:27000;ejsuq0192:10000;wiifos123:600' are three transactions by three different wallet IDs that might be associated with multiple different real names, or all the same real name, depending on 'markedWallets'.
+
+You need to return a HashMap of each criminal mastermind's tallied amount.The keys of the HashMap need to be their real names, with each associated value being their total calculated transaction amount.
+
+A small test case is present in the main method of this class, which can be used to see if you are on the right track.
+
+Good luck! The FBI is counting on you

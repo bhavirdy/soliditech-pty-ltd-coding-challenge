@@ -1,0 +1,74 @@
+Write a Java program containing two methods that will entangle and disentangle a string.
+
+Take note of the template code in the code panel for the required method signatures and implement the logic in the "entangle" and "disentangle" methods.
+
+Feel free to use the main method to test the methods.
+
+
+
+Entangle strings
+
+
+Input: Two strings of varying length.
+
+Output: A single string containing all the characters from both input strings.
+
+
+
+Notes:
+
+The output string's even character positions (zero index) will be from the first string from left to right.
+The output string's odd character positions (zero index) will be from the second string from right to left.
+If either of the strings are longer, then the remaining characters must be appended to the result.
+
+
+Example:
+
+Input:
+
+entangle("Hello", "World")  
+
+
+Output:
+
+HdellrlooW
+
+
+
+
+Disentangle String
+
+
+Input
+
+inputString: A single string containing entangled strings.
+
+largerStringLength: A positive/negative number indicating the number of characters in the larger string.
+
+If negative - the larger string must be the first string in the output array.
+If positive - the larger string must be the second string in the output array.
+
+
+Output:
+
+An array of strings after the input string has been disentangled, first index containing the left string and second index containing the right string.
+
+
+Notes:
+
+The output array at index 0 should contain all the characters in the input string's even character positions (zero index), up to the expected length for the first string.
+The output array at index 1 should contain all the characters in the input string's odd character positions (zero index) in reverse order, up to the expected length for the second string.
+
+
+Example:
+
+Input:
+
+inputString : "H!edlllrooW"
+largerStringLength : 6
+disentangle("H!edlllrooW", 6)
+
+
+Output:
+
+[ "Hello" , "World!"]
