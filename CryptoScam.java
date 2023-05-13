@@ -5,34 +5,32 @@ public class CryptoScam {
 	public static HashMap<String, Long> tallyMoneyStolen(String rawInput, HashMap<String, String> walletToName)
 	{
 		HashMap<String, Long> talliedAmounts = new HashMap<>();
-
-		// Do your stuff here!
 		
 		// Split the raw input into individual transactions
-        String[] transactions = rawInput.split(";");
+        	String[] transactions = rawInput.split(";");
 
-        // Process each transaction
-        for (String transaction : transactions) {
-            // Split the transaction into wallet ID and amount
-            String[] parts = transaction.split(":");
-            if (parts.length != 2) {
-                continue; // Skip invalid transactions
-            }
+        	// Process each transaction
+        	for (String transaction : transactions) {
+            		// Split the transaction into wallet ID and amount
+            		String[] parts = transaction.split(":");
+            		if (parts.length != 2) {
+                		continue; // Skip invalid transactions
+            		}
 
-            String walletId = parts[0];
-            long amount = Long.parseLong(parts[1]);
+            		String walletId = parts[0];
+            		long amount = Long.parseLong(parts[1]);
 
-            // Find the associated real name for the wallet ID
-            String realName = walletToName.get(walletId);
-            if (realName == null) {
-                continue; // Skip transactions without an associated real name
-            }
+            		// Find the associated real name for the wallet ID
+            		String realName = walletToName.get(walletId);
+            		if (realName == null) {
+                		continue; // Skip transactions without an associated real name
+            		}
 
-            // Update the tallied amount for the real name
-            long currentAmount = talliedAmounts.getOrDefault(realName, 0L);
-            long newAmount = currentAmount + amount;
-            talliedAmounts.put(realName, newAmount);
-        }
+            		// Update the tallied amount for the real name
+            		long currentAmount = talliedAmounts.getOrDefault(realName, 0L);
+            		long newAmount = currentAmount + amount;
+            		talliedAmounts.put(realName, newAmount);
+        	}
 
 		return talliedAmounts;
 	}
